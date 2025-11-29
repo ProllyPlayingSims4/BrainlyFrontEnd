@@ -1,5 +1,7 @@
-/* @layer theme, base, components, utilities;
-@import "tailwindcss/theme.css" layer(theme);
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities); */
- @import "tailwindcss";
+@import "tailwindcss";
+
+@theme{
+  --color-lavender-300: #e0e6fe;
+  --color-lavender-500: #3e38a7;
+  --color-lavender-600: #5046e4;
+}
