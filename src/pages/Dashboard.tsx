@@ -3,6 +3,7 @@ import { AddIcon } from '../components/Icons/AddIcon'
 import { ShareIcon } from '../components/Icons/ShareIcon'
 import { Sidebar } from '../components/UI/Sidebar'
 import { BrainLogo } from '../components/Icons/BrainLogo'
+import { Card } from '../components/UI/Card'
 
 const Dashboard = () => {
 
@@ -22,8 +23,20 @@ const Dashboard = () => {
       <Sidebar Logo={<BrainLogo />} Heading='Smart Brain' Tabs={["Tweets", "Videos", "Documents", "Links", "Tags"]} onTabClick={handleTabClick} />
 
       <div className='flex-1 p-4'>
-        <Button variant='primary' size='sm' text='Add Content' startIcon={<AddIcon />} onClick={addContent} />
+        <nav className='flex justify-between m-4'>
+          <div className='text-white'>
+              All Notes
+          </div>
+          <div className='flex gap-2'>
+            <Button variant='primary' size='sm' text='Add Content' startIcon={<AddIcon />} onClick={addContent} />
         <Button variant='secondary' size='md' text='Share Brain' startIcon={<ShareIcon />} onClick={handleShare} />
+          </div>
+        
+        </nav>
+        <div className='Main Content'>
+            <Card Logo={<BrainLogo/>} Heading='Frontend Dev' MainContent='here we are' Tags='#DevLife #FrontendDev #softwareDevelopment' Date='25-12-2025'/>
+        </div>
+        
       </div>
 
 
