@@ -7,7 +7,7 @@ interface SidebarProps {
     onTabClick?: (tab: string) => void
 }
 
-const defaultStyles = "flex flex-col items-start gap-3 w-48 p-4 bg-gray-100 h-full"
+const defaultStyles = "flex flex-col items-start gap-3 w-48 p-4 bg-gray-100 h-screen"
 
 export function Sidebar(props: SidebarProps) {
     const [activeTab, setActiveTab] = useState(props.Tabs[0]);
@@ -15,7 +15,7 @@ export function Sidebar(props: SidebarProps) {
         setActiveTab(tab);
         props.onTabClick?.(tab);
     }
-    return <div  className="bg-linear-to-r from-gray-800 to-gray-600 backdrop-blur-xl">
+    return <div  className="bg-linear-to-r from-gray-800 to-gray-600 backdrop-blur-xl fixed top-0 left-0 min-h-screen">
         <div className="flex justify-center items-center ">
          {props.Logo}
          {props.Heading}

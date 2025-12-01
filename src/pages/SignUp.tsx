@@ -1,9 +1,10 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 
 const SignUp = () => {
+    const navigate = useNavigate();
     const handleSignUp = async (e: React.FormEvent) => {
         e.preventDefault();
         // Add signup logic here
@@ -19,6 +20,7 @@ const SignUp = () => {
             const response = await axios.post('http://localhost:3000/api/v1/signup', formData);
             console.log('successful response', response);   
             localStorage.setItem('token', response.data.token);
+            navigate("/home");
 
         } catch(err){
             console.error(err);
