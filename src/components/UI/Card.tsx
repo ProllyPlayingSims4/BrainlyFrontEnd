@@ -12,7 +12,7 @@ interface CardProps {
     Date: string
 }
 
-const defaultStyles = " bg-gray-400 flex flex-col gap-2 border-red-500 w-[25vw] h-[50vh] rounded-2xl"
+const defaultStyles = " bg-gray-400 flex flex-col gap-2 border-red-500 max-w-96 h-[50vh] rounded-2xl"
 
 const handleShare = () => {
     
@@ -40,7 +40,7 @@ export const Card = (props: CardProps) => {
             </div>
         </div>
         {/* Content */}
-        <div className="Content py-4 p-2">
+        <div className="Content py-4 p-2 w-full wrap-break-word">
             {props.MainContent}
         </div>
         <div className="Tags p-2">

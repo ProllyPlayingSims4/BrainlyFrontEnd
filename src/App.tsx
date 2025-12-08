@@ -6,7 +6,7 @@ import Dashboard from './pages/Dashboard'
 function App() {
 const router = createBrowserRouter([
   { 
-    path: '/', 
+    path: '/home', 
     element: <Login/> 
   },
   {
@@ -14,7 +14,7 @@ const router = createBrowserRouter([
     element: <SignUp/>
   },
   {
-    path: "/home",
+    path: "/",
     element: <Dashboard/>
   }
 ])
