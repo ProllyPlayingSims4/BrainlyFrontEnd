@@ -7,7 +7,7 @@ interface ButtonProps{
     text: string,
     startIcon?: ReactElement,
     endIcon?: ReactElement,
-    onClick: () => void 
+    onClick?: () => void 
 }
 
 const variantStyles = {
@@ -15,7 +15,7 @@ const variantStyles = {
     "secondary": "bg-lavender-300 text-lavender-600"
 }
 
-const defaultStyles = "flex justify-center items-center rounded-md";
+const defaultStyles = "flex justify-center items-center rounded-md cursor-pointer";
 
 const sizeStyles = {
     "sm": "py-1 px-2",
