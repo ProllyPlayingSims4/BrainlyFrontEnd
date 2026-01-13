@@ -42,7 +42,7 @@ const Dashboard = () => {
   return (
 
     <>
-      <AddContentForm open= {showAddModal} onClose={closeAddContent} onChange={handleSubmit}/>
+      <AddContentForm open= {showAddModal} onClose={closeAddContent} onSubmit={handleSubmit}/>
       <Sidebar Logo={<BrainLogo />} Heading='Smart Brain' Tabs={["Tweets", "Videos", "Documents", "Links", "Tags"]} onTabClick={handleTabClick} />
      
 

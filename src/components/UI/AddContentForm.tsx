@@ -11,7 +11,7 @@ interface AddContentFormProps {
 
 
 export const AddContentForm = ({open, onClose, onSubmit}: AddContentFormProps) => {
-    const [showModal, setShowModal] = useState(false);
+    //const [showModal, setShowModal] = useState(false);
 
     const [form, setForm] = useState({
     link: '',
